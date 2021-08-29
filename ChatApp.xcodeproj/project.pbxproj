@@ -25,6 +25,11 @@
 		A534A08A26DB090700A69639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A534A08926DB090700A69639 /* GoogleService-Info.plist */; };
 		A534A08D26DB0DF900A69639 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08C26DB0DF900A69639 /* SessionStore.swift */; };
 		A534A09026DB10BC00A69639 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08F26DB10BC00A69639 /* HomeTabView.swift */; };
+		A5A6CEDF26DBCD2900AD65BE /* FirestoreDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6CEDE26DBCD2900AD65BE /* FirestoreDb.swift */; };
+		A5A6CEE226DBE63600AD65BE /* ContatosTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6CEE126DBE63600AD65BE /* ContatosTabItem.swift */; };
+		A5A6CEE426DBE64300AD65BE /* MensagensTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6CEE326DBE64300AD65BE /* MensagensTabItem.swift */; };
+		A5A6CEE626DBE64F00AD65BE /* ConfiguracoesTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6CEE526DBE64F00AD65BE /* ConfiguracoesTabItem.swift */; };
+		A5A6CEE926DBF4AF00AD65BE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6CEE826DBF4AF00AD65BE /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		A534A08926DB090700A69639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A534A08C26DB0DF900A69639 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		A534A08F26DB10BC00A69639 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		A5A6CEDE26DBCD2900AD65BE /* FirestoreDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDb.swift; sourceTree = "<group>"; };
+		A5A6CEE126DBE63600AD65BE /* ContatosTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosTabItem.swift; sourceTree = "<group>"; };
+		A5A6CEE326DBE64300AD65BE /* MensagensTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensagensTabItem.swift; sourceTree = "<group>"; };
+		A5A6CEE526DBE64F00AD65BE /* ConfiguracoesTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesTabItem.swift; sourceTree = "<group>"; };
+		A5A6CEE826DBF4AF00AD65BE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EC4541196A6242621F9F350E /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +130,7 @@
 		A534A07126DAF97D00A69639 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A5A6CEE726DBF48F00AD65BE /* FilePicker */,
 				A534A08B26DB0DE900A69639 /* Firebase */,
 				A534A08126DAFEA700A69639 /* Enums */,
 				A534A07326DAF99300A69639 /* Extensions */,
@@ -174,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				A534A08C26DB0DF900A69639 /* SessionStore.swift */,
+				A5A6CEDE26DBCD2900AD65BE /* FirestoreDb.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -181,9 +193,28 @@
 		A534A08E26DB10B000A69639 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A5A6CEE026DBE62400AD65BE /* Tabs */,
 				A534A08F26DB10BC00A69639 /* HomeTabView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A5A6CEE026DBE62400AD65BE /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				A5A6CEE126DBE63600AD65BE /* ContatosTabItem.swift */,
+				A5A6CEE326DBE64300AD65BE /* MensagensTabItem.swift */,
+				A5A6CEE526DBE64F00AD65BE /* ConfiguracoesTabItem.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		A5A6CEE726DBF48F00AD65BE /* FilePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A5A6CEE826DBF4AF00AD65BE /* ImagePicker.swift */,
+			);
+			path = FilePicker;
 			sourceTree = "<group>";
 		};
 		CCAD0A3C17C2A1C50BDCDDF1 /* Pods */ = {
@@ -327,6 +358,10 @@
 				A534A08526DAFF8400A69639 /* SenhaInput.swift in Sources */,
 				A534A05A26DAF39B00A69639 /* AppDelegate.swift in Sources */,
 				A534A05C26DAF39B00A69639 /* SceneDelegate.swift in Sources */,
+				A5A6CEE926DBF4AF00AD65BE /* ImagePicker.swift in Sources */,
+				A5A6CEE626DBE64F00AD65BE /* ConfiguracoesTabItem.swift in Sources */,
+				A5A6CEDF26DBCD2900AD65BE /* FirestoreDb.swift in Sources */,
+				A5A6CEE426DBE64300AD65BE /* MensagensTabItem.swift in Sources */,
 				A534A09026DB10BC00A69639 /* HomeTabView.swift in Sources */,
 				A534A07926DAF9D400A69639 /* CadastroView.swift in Sources */,
 				A534A07726DAF9C900A69639 /* LoginView.swift in Sources */,
@@ -334,6 +369,7 @@
 				A534A07F26DAFE8800A69639 /* ColorExtension.swift in Sources */,
 				A534A08026DAFE8800A69639 /* ViewExtension.swift in Sources */,
 				A534A08326DAFEBC00A69639 /* Enums.swift in Sources */,
+				A5A6CEE226DBE63600AD65BE /* ContatosTabItem.swift in Sources */,
 				A534A08D26DB0DF900A69639 /* SessionStore.swift in Sources */,
 				A534A07C26DAFA9A00A69639 /* TextoInput.swift in Sources */,
 			);

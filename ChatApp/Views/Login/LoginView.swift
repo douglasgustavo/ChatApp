@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @EnvironmentObject var session: SessionStore
+    var database = FirebaseDb()
     
     @State var email: String = ""
     @State var senha: String = ""
@@ -22,6 +23,9 @@ struct LoginView: View {
                 self.error = error.localizedDescription
                 self.alerta = true
             } else {
+                if let idUsuario = result?.user.uid {
+                    self.database.userManager.registraLoginLogoutUsuario(idUsuario: idUsuario, acao: .login)
+                }
                 self.email = ""
                 self.senha = ""
             }

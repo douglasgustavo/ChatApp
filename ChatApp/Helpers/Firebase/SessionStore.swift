@@ -13,6 +13,7 @@ class SessionStore: ObservableObject {
     var didChange = PassthroughSubject<SessionStore, Never>()
     @Published var session: User? {didSet {self.didChange.send(self)}}
     var handle: AuthStateDidChangeListenerHandle?
+    var firestore = FirebaseDb()
     
     func lister(){
         handle = Auth.auth().addStateDidChangeListener({ auth, user in
@@ -24,8 +25,16 @@ class SessionStore: ObservableObject {
         })
     }
     
+    func retornaUid() -> String {
+        if let idUsuario = Auth.auth().currentUser?.uid {
+            return idUsuario
+        }
+        return ""
+    }
+    
     func criarUsuario(email: String, senha: String, handler: @escaping AuthDataResultCallback){
         Auth.auth().createUser(withEmail: email, password: senha, completion: handler)
+        
     }
     
     func logarUsuario(email: String, senha: String, handler: @escaping AuthDataResultCallback){

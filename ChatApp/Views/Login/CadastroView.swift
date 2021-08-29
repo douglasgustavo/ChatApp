@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct CadastroView: View {
     @EnvironmentObject var session: SessionStore
+    var database = FirebaseDb()
     
     @State var nome: String = ""
     @State var email: String = ""
@@ -22,6 +24,9 @@ struct CadastroView: View {
                 self.error = error.localizedDescription
                 self.alerta = true
             } else {
+                if let idUsuario = result?.user.uid {
+                    self.database.userManager.registraLoginLogoutUsuario(idUsuario: idUsuario, acao: .login)
+                }
                 self.nome = ""
                 self.email = ""
                 self.senha = ""

@@ -9,17 +9,37 @@ import SwiftUI
 
 struct HomeTabView: View {
     @EnvironmentObject var session: SessionStore
+    var database = FirebaseDb()
     
     func sair(){
         session.deslogarUsuario()
     }
     
     var body: some View {
-        HStack{
-            Text("Logado!")
-            Button(action: sair, label: {
-                Text("Sair")
-            })
+        TabView {
+            NavigationView {
+                ContatosTabItem()
+            }
+            .tabItem {
+                Image(systemName: "person.3")
+                Text("Contatos")
+            }
+            
+            NavigationView{
+                MensagensTabItem()
+            }
+            .tabItem {
+                Image(systemName: "message")
+                Text("Mensagens")
+            }
+            
+            NavigationView{
+                ConfiguracoesTabItem()
+            }
+            .tabItem {
+                Image(systemName: "gearshape")
+                Text("Configurações")
+            }
         }
     }
 }

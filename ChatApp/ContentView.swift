@@ -18,9 +18,7 @@ struct ContentView: View {
     var body: some View {
         Group{
             if session.session != nil {
-                NavigationView{
-                    HomeTabView()
-                }
+                HomeTabView()
             } else {
                 NavigationView{
                     LoginView()

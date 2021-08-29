@@ -12,3 +12,7 @@ enum TipoInput {
 enum SecureFieldType {
     case secure, normal
 }
+
+enum LoginLogout{
+    case login, logout
+}
