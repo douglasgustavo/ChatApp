@@ -8,12 +8,10 @@
 
 ---
 
-### Utilizado:
+### Bibliotecas:
 
-[Cocoapods:](https://github.com/CocoaPods/CocoaPods)  
-* pod 'Firebase/Auth'
-* pod 'Firebase/Firestore'
-* pod 'Firebase/Storage'
+* [Cocoapods;](https://github.com/CocoaPods/CocoaPods)
+* [NavigationKit;](https://github.com/rebeloper/NavigationKit)
 
 ---
 
