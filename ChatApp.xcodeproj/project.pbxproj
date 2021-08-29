@@ -23,6 +23,8 @@
 		A534A08326DAFEBC00A69639 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08226DAFEBC00A69639 /* Enums.swift */; };
 		A534A08526DAFF8400A69639 /* SenhaInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08426DAFF8400A69639 /* SenhaInput.swift */; };
 		A534A08A26DB090700A69639 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A534A08926DB090700A69639 /* GoogleService-Info.plist */; };
+		A534A08D26DB0DF900A69639 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08C26DB0DF900A69639 /* SessionStore.swift */; };
+		A534A09026DB10BC00A69639 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A534A08F26DB10BC00A69639 /* HomeTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		A534A08226DAFEBC00A69639 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		A534A08426DAFF8400A69639 /* SenhaInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenhaInput.swift; sourceTree = "<group>"; };
 		A534A08926DB090700A69639 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A534A08C26DB0DF900A69639 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		A534A08F26DB10BC00A69639 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		EC4541196A6242621F9F350E /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,7 @@
 		A534A07026DAF97800A69639 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A534A08E26DB10B000A69639 /* Home */,
 				A534A07526DAF9BD00A69639 /* Login */,
 			);
 			path = Views;
@@ -115,6 +120,7 @@
 		A534A07126DAF97D00A69639 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A534A08B26DB0DE900A69639 /* Firebase */,
 				A534A08126DAFEA700A69639 /* Enums */,
 				A534A07326DAF99300A69639 /* Extensions */,
 			);
@@ -164,13 +170,28 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		A534A08B26DB0DE900A69639 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				A534A08C26DB0DF900A69639 /* SessionStore.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		A534A08E26DB10B000A69639 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A534A08F26DB10BC00A69639 /* HomeTabView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		CCAD0A3C17C2A1C50BDCDDF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EC4541196A6242621F9F350E /* Pods-ChatApp.debug.xcconfig */,
 				4659DC1C326924F19FC20270 /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,7 +252,7 @@
 			);
 			mainGroup = A534A04D26DAF39B00A69639;
 			packageReferences = (
-				A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit.git" */,
+				A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit" */,
 			);
 			productRefGroup = A534A05726DAF39B00A69639 /* Products */;
 			projectDirPath = "";
@@ -306,12 +327,14 @@
 				A534A08526DAFF8400A69639 /* SenhaInput.swift in Sources */,
 				A534A05A26DAF39B00A69639 /* AppDelegate.swift in Sources */,
 				A534A05C26DAF39B00A69639 /* SceneDelegate.swift in Sources */,
+				A534A09026DB10BC00A69639 /* HomeTabView.swift in Sources */,
 				A534A07926DAF9D400A69639 /* CadastroView.swift in Sources */,
 				A534A07726DAF9C900A69639 /* LoginView.swift in Sources */,
 				A534A05E26DAF39B00A69639 /* ContentView.swift in Sources */,
 				A534A07F26DAFE8800A69639 /* ColorExtension.swift in Sources */,
 				A534A08026DAFE8800A69639 /* ViewExtension.swift in Sources */,
 				A534A08326DAFEBC00A69639 /* Enums.swift in Sources */,
+				A534A08D26DB0DF900A69639 /* SessionStore.swift in Sources */,
 				A534A07C26DAFA9A00A69639 /* TextoInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +539,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit.git" */ = {
+		A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rebeloper/NavigationKit.git";
 			requirement = {
@@ -529,7 +552,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		A534A06E26DAF8B600A69639 /* NavigationKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit.git" */;
+			package = A534A06D26DAF8B600A69639 /* XCRemoteSwiftPackageReference "NavigationKit" */;
 			productName = NavigationKit;
 		};
 /* End XCSwiftPackageProductDependency section */

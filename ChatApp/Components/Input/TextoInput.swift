@@ -14,7 +14,7 @@ struct TextoInput: View {
     var corInput: Color = .principal
     var tipoTeclado: UIKeyboardType = .default
     
-    @State var valorTexto: String = ""
+    @Binding var valorTexto: String
     
     var body: some View {
         HStack(spacing: 13){
@@ -30,13 +30,5 @@ struct TextoInput: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 0)
-    }
-}
-
-struct TextoInput_Previews: PreviewProvider {
-    static var previews: some View {
-        HStack{
-            TextoInput()
-        }
     }
 }

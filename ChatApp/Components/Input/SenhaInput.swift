@@ -12,7 +12,7 @@ struct SenhaInput: View {
     var imagemLateral: String = "text.bubble"
     var corInput: Color = .principal
     
-    @State var valorTexto: String = ""
+    @Binding var valorTexto: String
     
     var body: some View {
         HStack (spacing: 13){
@@ -28,11 +28,5 @@ struct SenhaInput: View {
         .padding(.horizontal)
         .padding(.vertical, 0)
         
-    }
-}
-
-struct SenhaInput_Previews: PreviewProvider {
-    static var previews: some View {
-        SenhaInput()
     }
 }
